@@ -7,13 +7,17 @@
 <body>
     <div id="result"></div>
     <div id="puzzle">
+        <div class="word">
         {{#each letters}}
             {{#if_eq this " "}}
-                <div class="clearBoth"></div>
+                </div>
+                <div class="letter_blank"></div>
+                <div class="word">
             {{else}}
                 <div class="letter_{{this}}">{{this}}</div>
             {{/if_eq}}
         {{/each}}
+        </div>
         <div class="clearBoth"></div>
     </div>
     <div id="guessLetters">
@@ -30,7 +34,6 @@
         <div class="guessLetter" id="k">K</div>
         <div class="guessLetter" id="l">L</div>
         <div class="guessLetter" id="m">M</div>
-        <div class="clearBoth"></div>
         <div class="guessLetter" id="n">N</div>
         <div class="guessLetter" id="o">O</div>
         <div class="guessLetter" id="p">P</div>

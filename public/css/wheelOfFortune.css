@@ -5,22 +5,27 @@ body{
 
 #puzzle{
 	background-color: green;
+	border: 50px double lightblue;
+	padding: 30px 15px;
 }
 
 div[class*='letter_']{
 	background-color: white;
+	border: 5px solid black;
 	color: white;
 	float: left;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 60px;
-	margin: 5px;
+	margin: 2px;
 	width: 70px;
 	height: 70px;
+	font-weight: bold;
 }
 
-.letter_blank{
+div.letter_blank{
 	background-color: green;
+	border-color: green;"
 	color: green;
 }
 
@@ -32,26 +37,27 @@ div[class*='letter_'].visible{
 	clear: both;
 }
 
-#guessedLetters{
+#guessLetters{
+    margin:auto;
 	text-align: center;
-	margin:auto;
+	width: 910px;
 }
 
 .guessLetter{
 	cursor: pointer;
+    float: left;
 	font-size: 50px;
-	float: left;
-	width: 60px;
-	height: 60px;
+    height: 60px;
 	margin: 5px;
+    width: 60px;
 }
 
 .guessLetter.guessed{
+    color: lightgrey;
 	text-decoration:line-through;
-	color: grey;
 }
 
 #result{
+    font-size: 30px;
 	text-align: center;
-	font-size: 30px;
 }
