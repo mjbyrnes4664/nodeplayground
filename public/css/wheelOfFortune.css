@@ -1,0 +1,57 @@
+body{
+    width: 1080px;
+    margin: auto;
+}
+
+#puzzle{
+	background-color: green;
+}
+
+div[class*='letter_']{
+	background-color: white;
+	color: white;
+	float: left;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 60px;
+	margin: 5px;
+	width: 70px;
+	height: 70px;
+}
+
+.letter_blank{
+	background-color: green;
+	color: green;
+}
+
+div[class*='letter_'].visible{
+	color: black;
+}
+
+.clearBoth{
+	clear: both;
+}
+
+#guessedLetters{
+	text-align: center;
+	margin:auto;
+}
+
+.guessLetter{
+	cursor: pointer;
+	font-size: 50px;
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+}
+
+.guessLetter.guessed{
+	text-decoration:line-through;
+	color: grey;
+}
+
+#result{
+	text-align: center;
+	font-size: 30px;
+}

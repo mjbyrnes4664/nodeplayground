@@ -7,7 +7,19 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "~3.4.x"
+    "express": "~3.4.x",
+    "connect": "2.7.2",
+    "express": "3.3.5",
+    "url": "0.7.9",
+    "util": "0.4.9",
+    "express-hbs": "0.7.9",
+    "grunt-contrib-uglify": "0.2.2",
+    "grunt-contrib-watch": "0.5.3",
+    "node-html-encoder": "",
+    "readdirp": "1.0.1",
+    "handlebars": "2.0.0-alpha.2",
+    "hbs": "2.6.0",
+    "node-uuid": "1.4.1"
   },
   "engines": {
     "node": "0.10.x"
