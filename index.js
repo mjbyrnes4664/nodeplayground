@@ -50,7 +50,7 @@ app.get('/wheelOfFortune/puzzle3', function(request, response) {
 });
 
 app.get('/wheelOfFortune/puzzle4', function(request, response) {
-  response.render( 'WheelOfFortune', { next: "puzzle5", puzzle: "fantasy league of nations".split( "" ), category: "before & after" } );
+  response.render( 'WheelOfFortune', { next: "puzzle5", puzzle: "fantasy football league of nations".split( "" ), category: "before & after" } );
 });
 
 app.get('/wheelOfFortune/puzzle5', function(request, response) {
