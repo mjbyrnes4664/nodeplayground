@@ -25,5 +25,13 @@
 		$this.addClass( "guessed" );
 	}
 	
-	$(document).on("click", ".guessLetter", guessLetter);
+	function solvePuzzle(e){
+		e.preventDefault();
+		var lettersInPuzzle = $( "div[class*='letter_']" );
+		
+		lettersInPuzzle.addClass( "visible" );
+	}
+	
+	$( document ).on( "click", ".guessLetter", guessLetter );
+	$( document ).on( "click", "#solveLink", solvePuzzle );
 })();

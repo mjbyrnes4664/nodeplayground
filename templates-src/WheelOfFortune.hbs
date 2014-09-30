@@ -8,18 +8,20 @@
     <div id="result"></div>
     <div id="puzzle">
         <div class="word">
-        {{#each letters}}
+        {{#each puzzle}}
             {{#if_eq this " "}}
+                <div class="clearBoth"></div>
                 </div>
-                <div class="letter_blank"></div>
+                <div class="clearBoth"></div>
                 <div class="word">
             {{else}}
                 <div class="letter_{{this}}">{{this}}</div>
             {{/if_eq}}
         {{/each}}
-        </div>
         <div class="clearBoth"></div>
+        </div>
     </div>
+    <div id="category">{{category}}</div>
     <div id="guessLetters">
         <div class="guessLetter" id="a">A</div>
         <div class="guessLetter" id="b">B</div>
@@ -48,6 +50,14 @@
         <div class="guessLetter" id="y">Y</div>
         <div class="guessLetter" id="z">Z</div>
         <div class="clearBoth"></div>
+    </div>
+    <div>
+        <div id="solve"><a href="#" id="solveLink">Solve Puzzle</a></div>
+        {{#if next}}
+            <div id="next"><a href=/wheelOfFortune/{{next}}>Next Puzzle</a></div>
+        {{/if}}
+        <div class="clearBoth"></div>
+    </div>
     </div>
 </body>
 </html>

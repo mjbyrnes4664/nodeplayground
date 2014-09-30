@@ -1,12 +1,27 @@
 body{
-    width: 1080px;
+    width: 1140px;
     margin: auto;
+}
+
+#credits{
+	font-size: 30px;
+	text-align: center;
 }
 
 #puzzle{
 	background-color: green;
 	border: 50px double lightblue;
 	padding: 30px 15px;
+}
+#category{
+	font-size: 40px;
+	text-transform: uppercase;
+	text-align: center;
+	border-width: 2px 0px;
+	border-style: solid;
+	border-color: blue;
+	padding: 5px 0px;
+	margin: 30px 0px;
 }
 
 div[class*='letter_']{
@@ -27,6 +42,10 @@ div.letter_blank{
 	background-color: green;
 	border-color: green;"
 	color: green;
+}
+
+div.letter_\:, div.letter_\?{
+	color: black;
 }
 
 div[class*='letter_'].visible{
@@ -60,4 +79,12 @@ div[class*='letter_'].visible{
 #result{
     font-size: 30px;
 	text-align: center;
+}
+
+#solve{
+	float: left;
+}
+
+#next{
+	float: right;
 }
