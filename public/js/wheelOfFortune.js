@@ -16,7 +16,7 @@
 		} else if( numberOfMatches === 1 ){
 			resultMessage = "There is 1 " + letter.toUpperCase() + " in the puzzle";
 		} else {
-			resultMessage = "These are " + numberOfMatches + " " + letter.toUpperCase() + "s in the puzzle";
+			resultMessage = "There are " + numberOfMatches + " " + letter.toUpperCase() + "s in the puzzle";
 		}
 		
 		result.html(resultMessage);
