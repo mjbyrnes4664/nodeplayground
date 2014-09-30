@@ -30,12 +30,40 @@ app.configure(function(){
 });
 
 app.get('/', function(request, response) {
-  response.send('Hello World!')
-})
+  response.send('Hello World!');
+});
 
 app.get('/wheelOfFortune', function(request, response) {
-  response.render( 'WheelOfFortune', { letters: "this is my puzzle".split( "" ) } );
-})
+  response.render( 'index' );
+});
+
+app.get('/wheelOfFortune/puzzle1', function(request, response) {
+  response.render( 'WheelOfFortune', { next: "puzzle2", puzzle: "hakuna matata".split( "" ), category: "phrase" } );
+});
+
+app.get('/wheelOfFortune/puzzle2', function(request, response) {
+  response.render( 'WheelOfFortune', { next: "puzzle3", puzzle: "city hall and oates".split( "" ), category: "before & after" } );
+});
+
+app.get('/wheelOfFortune/puzzle3', function(request, response) {
+  response.render( 'WheelOfFortune', { next: "puzzle4", puzzle: "associate appreciation discount".split( "" ), category: "thing" } );
+});
+
+app.get('/wheelOfFortune/puzzle4', function(request, response) {
+  response.render( 'WheelOfFortune', { next: "puzzle5", puzzle: "fantasy league of nations".split( "" ), category: "before & after" } );
+});
+
+app.get('/wheelOfFortune/puzzle5', function(request, response) {
+  response.render( 'WheelOfFortune', { next: "puzzle6", puzzle: "sharknado two: the second one".split( "" ), category: "title" } );
+});
+
+app.get('/wheelOfFortune/puzzle6', function(request, response) {
+  response.render( 'WheelOfFortune', { next: "puzzle7", puzzle: "republic of the union of myanmar".split( "" ), category: "place" } );
+});
+
+app.get('/wheelOfFortune/puzzle7', function(request, response) {
+  response.render( 'WheelOfFortune', { puzzle: "anybody next please?".split( "" ), category: "phrase" } );
+});
 
 var port = process.env.PORT || 2500;
 server.listen(port, function() {
