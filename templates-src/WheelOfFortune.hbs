@@ -10,16 +10,16 @@
         <div class="word">
         {{#each puzzle}}
             {{#if_eq this " "}}
-                <div class="clearBoth"></div>
+                <div class="letter_blank"></div>
                 </div>
-                <div class="clearBoth"></div>
                 <div class="word">
             {{else}}
                 <div class="letter_{{this}}">{{this}}</div>
             {{/if_eq}}
         {{/each}}
-        <div class="clearBoth"></div>
+        
         </div>
+        <div class="clearBoth"></div>
     </div>
     <div id="category">{{category}}</div>
     <div id="guessLetters">
