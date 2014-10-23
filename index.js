@@ -65,6 +65,10 @@ app.get('/wheelOfFortune/puzzle7', function(request, response) {
   response.render( 'WheelOfFortune', { puzzle: "anybody next please?".split( "" ), category: "phrase" } );
 });
 
+app.get('/xss', function(request, response) {
+	response.render( 'XSS', {} );
+})
+
 var port = process.env.PORT || 2500;
 server.listen(port, function() {
   console.log("LISTENING ON PORT: "+port);

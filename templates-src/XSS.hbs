@@ -1,0 +1,41 @@
+<!doctype html>
+<head>
+    <script type="text/javascript" src="/js/vendor/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="/js/xss.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var name = getQueryParameter( "name" ) || "stranger",
+            user= getQueryParameter( "user" );
+        document.write("Hello " + preventXss(name) + "!");
+        if( user ){
+            document.write( "<br/><a href=/profile?user=" + user + ">My Profile</a>" );
+        }
+    </script>
+    
+    <form>
+        <div style="padding: 10px 0px;">
+            <label for="textField">Enter Your Name: </label>
+            <input id="textField" type="text"/>
+            <input type="submit" value="Validate" id="validateButton"/>
+            <input type="submit" value="Validate Cleanly" id="cleanValidateButton"/>
+        </div>
+        <div id="result"></div>
+        <div style="padding: 10px 0px;">
+            <label for="textFiel2d">Enter A Color: </label>
+            <input id="textField2" type="text"/>
+            <input type="submit" value="Show Color" id="validateButton2"/>
+            <input type="submit" value="Show Color Cleanly" id="cleanValidateButton2"/>
+        </div>
+        <div id="result2"></div>
+        
+        <div style="padding: 10px 0px;">
+            <button id="cookieButton">Get Cookie</button>
+            <button id="cleanCookieButton">Get Cookie Cleanly</button>
+        </div>
+        <div id="result3"></div>
+        
+    </form>
+</body>
+</html>
