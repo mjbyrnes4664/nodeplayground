@@ -8,7 +8,7 @@
     <script type="text/javascript">
         var name = getQueryParameter( "name" ) || "stranger",
             user= getQueryParameter( "user" );
-        document.write("Hello " + preventXss(name) + "!");
+        document.write("Hello " + name + "!");
         if( user ){
             document.write( "<br/><a href=/profile?user=" + user + ">My Profile</a>" );
         }
