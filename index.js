@@ -30,11 +30,11 @@ app.configure(function(){
 });
 
 app.get('/', function(request, response) {
-  response.send('Hello World!');
+  response.render( 'siteIndex' );
 });
 
 app.get('/wheelOfFortune', function(request, response) {
-  response.render( 'index' );
+  response.render( 'wheelOfFortuneIndex' );
 });
 
 app.get('/wheelOfFortune/puzzle1', function(request, response) {
